@@ -1,0 +1,241 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table{
+    background-color: white;
+}
+
+body{
+    
+    background-image: url(/img/fondo.jpg);
+ 
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1;
+    grid-template-rows: 6;
+    
+    background-size: contain;
+}
+
+
+header{
+    background-color: green;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+    width: 100%;
+    text-align: left;
+    height: 100px;
+    transition: all 1s;
+    font-family: "koulen", cursive;
+}
+
+
+.header__logoMutual{
+    height: 100px;
+    width: 100px;
+}
+
+.infoMutual{
+    display: flex;
+}
+
+
+.hero{
+    
+    position:relative;
+    display: flex;
+   
+    justify-content: center;
+    align-content: center;
+
+    
+}
+.imgMutual{
+    width: 50%;
+    position:relative;
+}
+.text{
+    position: absolute;
+    bottom: 0%;
+    width: 50%;
+    padding: 1rem;
+    height: ;
+    background-color: rgba(7, 190, 31, 0.623);
+    opacity: 100%;
+}
+#subtexto{
+    margin-right: 1rem;
+}
+
+nav{
+    padding: .5rem .5rem;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Koulen', cursive;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    transition: all 2seg;
+    
+}
+.logo:hover{
+    transform: scale(1.2);
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+li{
+    padding: 1rem;
+    transition: all 2seg;
+}
+li:hover{
+    transform: scale(1.2);
+    background: green;
+}
+
+.carta{
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+
+}
+
+.art{
+    padding: 50px 30px;
+    background-color: tomato;
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    justify-content: space-around;
+    animation-name: aparecer;
+    animation-duration: 3s;
+    animation-delay: 10seg;
+    animation-iteration-count: 1;
+
+}
+.infoMutual{
+    background-color: white;
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Cartas hechas con grid: */
+.cartaGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 50px 30px;
+}
+.cartaGrid .art{
+    background-color: green;
+}
+
+
+
+
+/*  MEDIA QUERIES PARA TABLETS (768px) */
+
+@media screen and (max-width: 768px){
+    nav {
+        
+    }
+    header{
+        
+    }
+    .hero {
+       
+            background-position: center;
+            background-size: cover;
+    }
+    .hero p{
+        color: rgb(0, 0, 0);
+
+    }
+    .hero h2{
+        color: rgb(0, 0, 0);
+    }
+    
+}
+
+
+/* MEDIA QUERIES celus*/
+
+@media screen and (max-width: 500px){
+    header{
+        display: none;
+    }
+    
+    
+    .imgMutual{
+        width: 100%;
+        position:relative;
+    }
+    .text{
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        padding: 1rem;
+    
+        background-color: rgba(7, 190, 31, 0.623);
+      
+    }
+  
+
+   
+    .hero h2{
+        color: rgb(0, 0, 0);
+    }
+
+    .carta{
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    
+    .cartaGrid{
+        grid-template-columns: 1fr;
+    }
+}
+footer{
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: end;
+}
+
+
+
+
+
